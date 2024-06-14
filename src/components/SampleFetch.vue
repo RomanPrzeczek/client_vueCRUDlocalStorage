@@ -44,7 +44,7 @@ export default {
     methods: {
         async fetchKurzy(){
             console.log('fetchKurzy');
-            await fetch('http://localhost:8000/cnb')
+            await fetch('https://servervuecrudlocalstorage-production.up.railway.app/cnb')
                 .then((res) => res.text())
                 .then((body) => {
                     this.outputFetch=parseFloat(body);

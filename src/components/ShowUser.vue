@@ -94,7 +94,7 @@ export default {
             this.$emit('actualPage',`login`);
         },
         async fetchKurzy(){         // getting/fetching EUR rate from bank API
-            await fetch('http://localhost:8000/cnb')
+            await fetch('https://servervuecrudlocalstorage-production.up.railway.app/cnb')
                 .then((res) => res.text())
                 .then((body) => {
                     this.inputFetch =  parseFloat(body);
